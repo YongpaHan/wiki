@@ -23,7 +23,6 @@
 - Custom themes
 - Multilingual (English, Korean)
 - Dark mode
-- hi
 - ...
 
 ## Requirements
