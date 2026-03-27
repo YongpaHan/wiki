@@ -23,6 +23,7 @@
 - Custom themes
 - Multilingual (English, Korean)
 - Dark mode
+- hahaha
 - ...
 
 ## Requirements
@@ -65,59 +66,59 @@ For Nginx, see `nginx.example.conf`
 
 ### Wiki syntax
 
-| Syntax | Description |
-|---|---|
-| `[[Page title]]` | Link to another page (autocomplete on desktop input environments) |
-| `[[Page title\|Display text]]` | Link with alias |
-| `[[Parent/Child]]` | Use `/` to separate page hierarchy |
-| `![[Page title]]` | Embed another page's content inline (Transclusion) |
-| `#tag` | Add a tag |
-| `(redirect: Page title)` | Redirect to another page (first line of document) |
+| Syntax                         | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
+| `[[Page title]]`               | Link to another page (autocomplete on desktop input environments) |
+| `[[Page title\|Display text]]` | Link with alias                                                   |
+| `[[Parent/Child]]`             | Use `/` to separate page hierarchy                                |
+| `![[Page title]]`              | Embed another page's content inline (Transclusion)                |
+| `#tag`                         | Add a tag                                                         |
+| `(redirect: Page title)`       | Redirect to another page (first line of document)                 |
 
 ### Embeds
 
-| Syntax | Description | Options | Example |
-|---|---|---|---|
-| `(image: URL)` | Image | `width`, `height`, `caption` | `(image: URL width: 300px caption: Beach)` |
-| `(video: URL)` | Video (YouTube, Vimeo, etc.) | `width`, `height` | `(video: URL width: 80%)` |
-| `(iframe: URL)` | iframe (`https://` URL only) | `width`, `height` | `(iframe: URL height: 400px)` |
-| `(map: Address)` | Google Maps | `width`, `height` | `(map: Central Park, New York)` |
-| `(codepen: URL)` | CodePen | `width`, `height` | `(codepen: URL)` |
-| `(arena: URL)` | Are.na channel | `width`, `height` | `(arena: username/channel-name)` |
-| `(wikipedia: Search term)` | Wikipedia link (default: wiki language) | `lang` | `(wikipedia: Markdown lang: ja)` |
-| `(toc)` | Table of contents from document headings | | `(toc)` |
-| `(recent: N)` | List of recently edited pages | | `(recent: 5)` |
-| `(wanted: N)` | List of wanted pages | | `(wanted: 10)` |
-| `(random: N)` | List of random pages | | `(random: 10)` |
+| Syntax                     | Description                              | Options                      | Example                                    |
+| -------------------------- | ---------------------------------------- | ---------------------------- | ------------------------------------------ |
+| `(image: URL)`             | Image                                    | `width`, `height`, `caption` | `(image: URL width: 300px caption: Beach)` |
+| `(video: URL)`             | Video (YouTube, Vimeo, etc.)             | `width`, `height`            | `(video: URL width: 80%)`                  |
+| `(iframe: URL)`            | iframe (`https://` URL only)             | `width`, `height`            | `(iframe: URL height: 400px)`              |
+| `(map: Address)`           | Google Maps                              | `width`, `height`            | `(map: Central Park, New York)`            |
+| `(codepen: URL)`           | CodePen                                  | `width`, `height`            | `(codepen: URL)`                           |
+| `(arena: URL)`             | Are.na channel                           | `width`, `height`            | `(arena: username/channel-name)`           |
+| `(wikipedia: Search term)` | Wikipedia link (default: wiki language)  | `lang`                       | `(wikipedia: Markdown lang: ja)`           |
+| `(toc)`                    | Table of contents from document headings |                              | `(toc)`                                    |
+| `(recent: N)`              | List of recently edited pages            |                              | `(recent: 5)`                              |
+| `(wanted: N)`              | List of wanted pages                     |                              | `(wanted: 10)`                             |
+| `(random: N)`              | List of random pages                     |                              | `(random: 10)`                             |
 
 Values accept `px`, `%`, `rem`, `em`, etc.
 
 ### Feeds and API
 
-| Path | Description |
-|---|---|
-| `/rss.xml` | RSS feed |
-| `/atom.xml` | Atom feed |
-| `/feed.json` | JSON feed |
-| `/sitemap.xml` | Sitemap |
-| `/llms.txt` | LLM document index summary |
-| `/llms-full.txt` | LLM full document content |
-| `/api/all` | Full page list JSON; page item: `title`, `modified_at`, `url`, `redirect_target` |
+| Path                | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| `/rss.xml`          | RSS feed                                                                                   |
+| `/atom.xml`         | Atom feed                                                                                  |
+| `/feed.json`        | JSON feed                                                                                  |
+| `/sitemap.xml`      | Sitemap                                                                                    |
+| `/llms.txt`         | LLM document index summary                                                                 |
+| `/llms-full.txt`    | LLM full document content                                                                  |
+| `/api/all`          | Full page list JSON; page item: `title`, `modified_at`, `url`, `redirect_target`           |
 | `/api/wiki/{title}` | `GET`: document content JSON (`title`, `content`, `modified_at`, `url`, `redirect_target`) |
 
 ### Keyboard shortcuts
 
-| Shortcut | Description |
-|---|---|
-| `/` | Search |
-| `e` | Edit (on document view) |
-| `n` | New page |
-| `Cmd/Ctrl` + `I` | Italic (new page / edit) |
-| `Cmd/Ctrl` + `B` | Bold (new page / edit) |
-| `Cmd/Ctrl` + `K` | Wiki link (new page / edit) |
-| `Tab` | Indent (new page / edit) |
-| `Shift` + `Tab` | Outdent (new page / edit) |
-| `Cmd/Ctrl` + `S` or `Cmd/Ctrl` + `Enter` | Save (new page / edit) |
+| Shortcut                                 | Description                 |
+| ---------------------------------------- | --------------------------- |
+| `/`                                      | Search                      |
+| `e`                                      | Edit (on document view)     |
+| `n`                                      | New page                    |
+| `Cmd/Ctrl` + `I`                         | Italic (new page / edit)    |
+| `Cmd/Ctrl` + `B`                         | Bold (new page / edit)      |
+| `Cmd/Ctrl` + `K`                         | Wiki link (new page / edit) |
+| `Tab`                                    | Indent (new page / edit)    |
+| `Shift` + `Tab`                          | Outdent (new page / edit)   |
+| `Cmd/Ctrl` + `S` or `Cmd/Ctrl` + `Enter` | Save (new page / edit)      |
 
 ### Theme
 
