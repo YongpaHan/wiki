@@ -23,7 +23,7 @@
 - Custom themes
 - Multilingual (English, Korean)
 - Dark mode
-- hahaha
+- hi
 - ...
 
 ## Requirements
